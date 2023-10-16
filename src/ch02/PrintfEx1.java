@@ -8,8 +8,8 @@ public class PrintfEx1 {
 		
 //		1.  정수를 10진수, 8진수, 16진수로 출력
 		System.out.printf("%d%n", 15); //15 10진수
-		System.out.printf("%o%n",15); // 17 8진수
-		System.out.printf("%x%n",  15); // f 16진수
+		System.out.printf("%#o%n",15); // 17 8진수
+		System.out.printf("%#x%n",  15); // f 16진수
 		System.out.printf("%s%n", Integer.toBinaryString(15)); // 1111/ 2진수
 		// %n or \n 은 계행
 		
@@ -28,7 +28,21 @@ public class PrintfEx1 {
 		System.out.printf("%g%n", 123.456789); // 123.457 간략한 형식 
 		System.out.printf("%g%n", 0.00000001); // 1.00000e-8 간략한 형식
 		
+// print f 의 지시자 		
 		
+		System.out.printf("[%5d]%n", 10);
+		System.out.printf("[%-5d]%n", 10);  // - 왼쪽 정렬
+		System.out.printf("[%05d]%n", 10); // 0 을 쓰게함
+		System.out.printf("[5d]%n", 1234567);
 		
+		double d = 1.23456789;
+		
+		System.out.printf("%f%n", d);
+		System.out.printf("%14.10f%n", d); // 앞 공백 2개 소수점 뒤 영 2개 포함 14자리
+		
+		System.out.printf("[%s]%n", "www.github.com/jiwon317");
+		System.out.printf("[%30s]%n", "www.github.com/jiwon317"); //자리 확보
+		System.out.printf("[%-30s]%n", "www.github.com/jiwon317"); // 오른쪽 자리 확보
+		System.out.printf("[%.10s]%n", "www.github.com/jiwon317"); // 앞에서 10자리만
 	}
 }
